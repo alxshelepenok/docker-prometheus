@@ -1,4 +1,4 @@
-# docker-grafana
+# docker-prometheus
 
 Ready-to-run Docker image with Prometheus.
 
