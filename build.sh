@@ -1,9 +1,9 @@
 #!/bin/bash
 
 set -ex
-IMAGE_NAME="waterscape/prometheus"
-NEXUS_REPOSITORY="docker-hosted.nexus.wtrscape.com"
+IMAGE_NAME="alxshelepenok/prometheus"
+NEXUS_REGISTRY="docker-hosted.nexus.infrastructure.alxshelepenok.com"
 TAG="${1}"
 docker build -t ${IMAGE_NAME}:"${TAG}" .
-docker tag ${IMAGE_NAME}:"${TAG}" ${NEXUS_REPOSITORY}/${IMAGE_NAME}:"${TAG}"
-docker push ${NEXUS_REPOSITORY}/${IMAGE_NAME}:"${TAG}"
+docker tag ${IMAGE_NAME}:"${TAG}" ${NEXUS_REGISTRY}/${IMAGE_NAME}:"${TAG}"
+docker push ${NEXUS_REGISTRY}/${IMAGE_NAME}:"${TAG}"

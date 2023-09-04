@@ -5,7 +5,7 @@ Ready-to-run Docker image with Prometheus.
 ## Quickstart
 
 ```bash
-$ docker run --name prometheus -e waterscape/prometheus:latest
+$ docker run --name prometheus -e alxshelepenok/prometheus:latest
 ```
 
 ## Building
@@ -21,7 +21,7 @@ version: "3.9"
 
 services:
   prometheus:
-    image: waterscape/prometheus:latest
+    image: alxshelepenok/prometheus:latest
     volumes:
       - ./prometheus:/etc/prometheus
       - prometheus-data:/prometheus
